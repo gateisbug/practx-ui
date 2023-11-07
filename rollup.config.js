@@ -4,12 +4,17 @@ import commonjs from '@rollup/plugin-commonjs';
 import { swc, defineRollupSwcOption } from 'rollup-plugin-swc3';
 
 export default {
-    input: 'src/index.ts',
+    input: {
+        '.': 'src/index.ts',
+        Hello: 'src/Hello.tsx',
+        World: 'src/World.tsx',
+    },
     output: [
         {
-            file: 'dist/index.js',
+            dir: 'dist',
             format: 'esm',
-            sourcemap: true,
+            entryFileNames: '[name]/index.js',
+            chunkFileNames: 'shared/[name]-[hash].js',
         }
     ],
     plugins: [
@@ -20,7 +25,7 @@ export default {
                     "tsx": true,
                     "decorators": true
                 },
-                "target": "es6",
+                "target": "es2015",
             },
             tsconfig: './tsconfig.json'
         })),

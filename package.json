@@ -9,9 +9,23 @@
     "build-tsc": "tsc",
     "build": "rollup -c --bundleConfigAsCjs"
   },
-  "module": "dist/index.js",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./Hello": {
+      "import": "./dist/Hello/index.js",
+      "types": "./dist/types/Hello.d.ts"
+    },
+    "./World": {
+      "import": "./dist/World/index.js",
+      "types": "./dist/types/World.d.ts"
+    }
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
