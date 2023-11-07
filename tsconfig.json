@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    /* Build Option */
+    "target": "ES2015",
+//    "useDefineForClassFields": true,
+    "lib": ["ES2015", "dom"],
+    "module": "ESNext",
+//    "skipLibCheck": true,
+    "rootDir": "./src",
+    "allowJs": true,
+//    "typeRoots": ["src/types"],
+
+    /* Bundler mode */
+    "moduleResolution": "node",
+//    "resolveJsonModule": true,
+//    "isolatedModules": true,
+//    "noEmit": true,
+    "jsx": "react",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "declaration": true,
+
+    /* Linting */
+    "strict": true,
+//    "noUnusedLocals": true,
+//    "noUnusedParameters": true,
+//    "noFallthroughCasesInSwitch": true,
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules", "dist", ".yarn"
+  ]
+}
