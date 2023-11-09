@@ -27,3 +27,5 @@ test.ts
 *.config.js
 *.cjs
 *.mjs
+
+.yarn

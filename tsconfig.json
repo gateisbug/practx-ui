@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
     /* Build Option */
-    "baseUrl": ".",
+    "baseUrl": "./",
     "target": "ES2015",
-    "useDefineForClassFields": true,
-    "lib": ["ES2015", "dom"],
+    "lib": ["ES2020", "dom"],
     "module": "ESNext",
     "skipLibCheck": false,
     "rootDir": "./src",
     "allowJs": true,
-//    "typeRoots": ["src/types"],
+    "useDefineForClassFields": true,
+    //    "typeRoots": ["src/types"],
 
     /* Bundler mode */
     "moduleResolution": "node",
-    "isolatedModules": true,
+    "isolatedModules": false,
 //    "noEmit": true,
     "jsx": "react",
     "outDir": "./dist",
