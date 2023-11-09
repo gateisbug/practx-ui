@@ -25,3 +25,5 @@ test.ts
 !.eslintrc.ts
 *.config.ts
 *.config.js
+*.cjs
+*.mjs
