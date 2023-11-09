@@ -1,0 +1,16 @@
+.button {
+    .contain {
+        background-color: gold;
+        color: #000;
+    }
+
+    .outline {
+        background-color: transparent;
+        outline: 1px solid gold;
+        color: #000;
+    }
+
+    .text {
+        color: blue;
+    }
+}
