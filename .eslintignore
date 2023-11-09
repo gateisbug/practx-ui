@@ -23,4 +23,5 @@ test.js
 test.ts
 !.eslintrc.js
 !.eslintrc.ts
-vite.config.ts
+*.config.ts
+*.config.js
