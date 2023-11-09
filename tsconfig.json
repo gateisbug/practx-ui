@@ -3,18 +3,17 @@
     /* Build Option */
     "baseUrl": ".",
     "target": "ES2015",
-//    "useDefineForClassFields": true,
+    "useDefineForClassFields": true,
     "lib": ["ES2015", "dom"],
     "module": "ESNext",
-//    "skipLibCheck": true,
+    "skipLibCheck": false,
     "rootDir": "./src",
     "allowJs": true,
 //    "typeRoots": ["src/types"],
 
     /* Bundler mode */
     "moduleResolution": "node",
-//    "resolveJsonModule": true,
-//    "isolatedModules": true,
+    "isolatedModules": true,
 //    "noEmit": true,
     "jsx": "react",
     "outDir": "./dist",
@@ -26,9 +25,9 @@
 
     /* Linting */
     "strict": true,
-//    "noUnusedLocals": true,
-//    "noUnusedParameters": true,
-//    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
 
     "paths": {
       "@src/*": ["src/*"],
