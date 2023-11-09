@@ -6,8 +6,8 @@ import { swc, defineRollupSwcOption } from 'rollup-plugin-swc3';
 export default {
     input: {
         '.': 'src/index.ts',
-        Hello: 'src/Hello.tsx',
-        World: 'src/World.tsx',
+        ui: 'src/ui/index.ts',
+        view: 'src/view/index.ts',
     },
     output: [
         {
@@ -19,13 +19,20 @@ export default {
     ],
     plugins: [
         swc(defineRollupSwcOption({
+            env: {
+                targets: [
+                    "defaults and fully supports es6-module",
+                    "maintained node versions",
+                    "partially supports css-grid"
+                ],
+            },
             jsc: {
-                "parser": {
-                    "syntax": "typescript",
-                    "tsx": true,
-                    "decorators": true
+                parser: {
+                    syntax: "typescript",
+                    tsx: true,
+                    decorators: true
                 },
-                "target": "es2015",
+                target: "es5",
             },
             tsconfig: './tsconfig.json'
         })),
