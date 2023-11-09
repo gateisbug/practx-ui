@@ -24,7 +24,7 @@ export default {
   plugins: [
     postcss({
       modules: {
-        generateScopedName: 'practics-[hash:base64:8]',
+        generateScopedName: 'prx-[hash:base64:8]',
       },
       plugins: [
         autoprefixer,
