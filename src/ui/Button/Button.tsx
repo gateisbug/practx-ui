@@ -1,23 +1,38 @@
-import React from 'react';
-import classnames from 'classnames/bind';
-import styles from './button.module.css';
-import { ClickableView, ClickableViewProps } from '@view';
+import { ClickableView } from '@view';
+import styled, { css } from 'styled-components';
 
-const cx = classnames.bind(styles);
-
-export interface ButtonProps extends ClickableViewProps {
+export interface ButtonProps {
   types?: 'contain' | 'outline' | 'text';
 }
 
-export default function Button({
-  types = 'text',
-  classnames,
-  children,
-  ...props
-}: ButtonProps) {
-  return (
-    <ClickableView classnames={cx('button', types, classnames)} {...props}>
-      {children}
-    </ClickableView>
-  );
-}
+const containStyle = css`
+  background-color: gold;
+  color: #000;
+`;
+
+const outlineStyle = css`
+  background-color: transparent;
+  outline: 1px solid gold;
+  color: #000;
+`;
+
+const textStyle = css`
+  color: blue;
+`;
+
+const Button = styled(ClickableView)<ButtonProps>`
+  ${({ types }) => {
+    switch (types) {
+      case 'text':
+        return textStyle;
+      case 'outline':
+        return outlineStyle;
+      case 'contain':
+        return containStyle;
+      default:
+        return containStyle;
+    }
+  }}
+`;
+
+export default Button;
