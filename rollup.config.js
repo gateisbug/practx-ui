@@ -24,9 +24,6 @@ export default {
   ],
   plugins: [
     postcss({
-      // modules: {
-      //   generateScopedName: 'prx-[hash:base64:8]',
-      // },
       plugins: [
         autoprefixer,
         postcssPresetEnv({
@@ -43,7 +40,7 @@ export default {
           tsx: true,
           decorators: true
         },
-        target: "es5",
+        target: "es2015",
         minify: false,
       },
       tsconfig: './tsconfig.json'
