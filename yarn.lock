@@ -2203,6 +2203,7 @@ __metadata:
     "@types/babel__core": "npm:^7"
     "@types/babel__preset-env": "npm:^7"
     "@types/eslint": "npm:^8"
+    "@types/node": "npm:^20.9.0"
     "@types/react": "npm:^18.2.36"
     "@types/react-dom": "npm:^18.2.14"
     "@types/styled-components": "npm:^5.1.30"
@@ -2713,7 +2714,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:^20.9.0":
   version: 20.9.0
   resolution: "@types/node@npm:20.9.0"
   dependencies:

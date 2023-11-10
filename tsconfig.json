@@ -22,6 +22,7 @@
     "declarationDir": "./dist/types",
     "sourceMap": false,
     "inlineSources": false,
+    "types": ["node"],
 
     /* Linting */
     "strict": true,

@@ -38,6 +38,7 @@ const RAW_RUNTIME_STATE =
           ["@types/babel__core", "npm:7.20.4"],\
           ["@types/babel__preset-env", "npm:7.9.5"],\
           ["@types/eslint", "npm:8.44.7"],\
+          ["@types/node", "npm:20.9.0"],\
           ["@types/react", "npm:18.2.36"],\
           ["@types/react-dom", "npm:18.2.14"],\
           ["@types/styled-components", "npm:5.1.30"],\
@@ -3853,6 +3854,7 @@ const RAW_RUNTIME_STATE =
           ["@types/babel__core", "npm:7.20.4"],\
           ["@types/babel__preset-env", "npm:7.9.5"],\
           ["@types/eslint", "npm:8.44.7"],\
+          ["@types/node", "npm:20.9.0"],\
           ["@types/react", "npm:18.2.36"],\
           ["@types/react-dom", "npm:18.2.14"],\
           ["@types/styled-components", "npm:5.1.30"],\
