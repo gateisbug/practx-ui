@@ -2187,9 +2187,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@practics/view@workspace:.":
+"@practx/ui@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@practics/view@workspace:."
+  resolution: "@practx/ui@workspace:."
   dependencies:
     "@babel/core": "npm:^7.23.3"
     "@babel/preset-env": "npm:^7.23.3"
