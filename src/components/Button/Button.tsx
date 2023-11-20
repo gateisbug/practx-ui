@@ -2,7 +2,7 @@ import View from './Button.view';
 import styled, { css } from 'styled-components';
 
 export interface ButtonProps {
-  type?: 'contain' | 'outline' | 'text';
+  vx?: 'contain' | 'outline' | 'text';
   fullWidth?: boolean;
 }
 
@@ -68,8 +68,8 @@ const textStyle = css`
 `;
 
 const Button = styled(View)<ButtonProps>`
-  ${({ type }) => {
-    switch (type) {
+  ${({ vx }) => {
+    switch (vx) {
       case 'text':
         return textStyle;
       case 'outline':
@@ -80,3 +80,5 @@ const Button = styled(View)<ButtonProps>`
     }
   }}
 `;
+
+export default Button;
