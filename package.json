@@ -7,7 +7,8 @@
   "packageManager": "yarn@4.0.1",
   "scripts": {
     "build-tsc": "rm -rf ./dist && tsc",
-    "build": "rm -rf ./dist && rollup -c --bundleConfigAsCjs"
+    "build": "rm -rf ./dist && rollup -c --bundleConfigAsCjs",
+    "watch": "rollup -c -w --bundleConfigAsCjs"
   },
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -17,13 +18,9 @@
       "import": "./dist/index.js",
       "types": "./dist/types/index.d.ts"
     },
-    "./ui": {
-      "import": "./dist/ui/index.js",
-      "types": "./dist/types/ui.d.ts"
-    },
-    "./view": {
-      "import": "./dist/view/index.js",
-      "types": "./dist/types/view.d.ts"
+    "./button": {
+      "import": "./dist/components/button/index.js",
+      "types": "./dist/types/Button/index.d.ts"
     }
   },
   "browserslist": [

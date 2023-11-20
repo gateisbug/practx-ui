@@ -11,8 +11,7 @@ import postcssPresetEnv from 'postcss-preset-env';
 export default {
   input: {
     '.': 'src/index.ts',
-    ui: 'src/ui/index.ts',
-    view: 'src/view/index.ts',
+    'button': 'src/components/Button/index.ts',
   },
   output: [
     {

@@ -1,2 +1,1 @@
-export { default as Button } from './Button';
-export { default as ButtonView } from './Button.view';
+export { default as Button, type ButtonProps } from './Button';
