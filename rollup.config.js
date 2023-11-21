@@ -11,7 +11,7 @@ import postcssPresetEnv from 'postcss-preset-env';
 export default {
   input: {
     '.': 'src/index.ts',
-    'button': 'src/components/Button/index.ts',
+    // 'button': 'src/components/Button/index.ts',
   },
   output: [
     {
@@ -21,6 +21,14 @@ export default {
       chunkFileNames: 'shared/[name]-[hash].js'
     }
   ],
+  // input: 'src/index.ts',
+  // output: [
+  //   {
+  //     file: 'dist/index.js',
+  //     format: 'esm',
+  //     // sourcemap: true,
+  //   }
+  // ],
   plugins: [
     postcss({
       plugins: [
