@@ -1,3 +1,5 @@
+// noinspection NodeCoreCodingAssistance
+
 import typescript from '@rollup/plugin-typescript';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -7,6 +9,11 @@ import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import autoprefixer from 'autoprefixer';
 import postcssPresetEnv from 'postcss-preset-env';
+import { createHash } from 'crypto';
+
+function hashmaker(string, length = 6) {
+  return createHash('md5').update(string).digest('hex').substring(0, length);
+}
 
 export default {
   input: {
@@ -21,16 +28,9 @@ export default {
       chunkFileNames: 'shared/[name]-[hash].js'
     }
   ],
-  // input: 'src/index.ts',
-  // output: [
-  //   {
-  //     file: 'dist/index.js',
-  //     format: 'esm',
-  //     // sourcemap: true,
-  //   }
-  // ],
   plugins: [
     postcss({
+      extensions: ['.css', '.module.css', '.scss'],
       plugins: [
         autoprefixer,
         postcssPresetEnv({
@@ -38,6 +38,13 @@ export default {
           minimumVendorImplementations: 2,
         }),
       ],
+      modules: {
+        generateScopedName: (name, _, css) => {
+          const hashcss = hashmaker(css, 4);
+          const hashname = hashmaker(name, 3);
+          return `css-${hashcss}${hashname}`;
+        }
+      },
       extract: false
     }),
     swc(defineRollupSwcOption({
@@ -62,9 +69,6 @@ export default {
         '@babel/preset-env',
         '@babel/preset-react'
       ],
-      plugins: [
-        'babel-plugin-styled-components'
-      ]
     })
   ],
   external: ['react', 'react-dom'] // 이곳에 포함되지 않은 라이브러리는 번들링시 포함됨.

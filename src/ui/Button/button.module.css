@@ -1,0 +1,79 @@
+.core {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    border: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:disabled {
+        cursor: default;
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
+.custom {
+    padding: var(--button-padding, 0.5rem 1rem);
+    border-radius: var(--button-radius, 0.25rem);
+}
+
+.fw {
+    width: 100%;
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.fill {
+    background-color: var(--button-surface, #0073ec);
+    color: var(--button-color, #fff);
+
+    /*noinspection CssUnresolvedCustomProperty*/
+    &:disabled {
+        background-color: var(--button-surface-disabled, #3f4759);
+        color: var(--button-color-disabled, #6f778b);
+    }
+
+    /*noinspection CssUnresolvedCustomProperty*/
+    &:not(:disabled):hover {
+        background-color: var(--button-surface-hover, #004491);
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.line {
+    outline: 0.0625rem solid var(--button-border, #0073ec);
+    background-color: var(--button-surface, transparent);
+    color: var(--button-color, #0073ec);
+
+    /*noinspection CssUnresolvedCustomProperty*/
+    &:disabled {
+        outline-color: var(--button-border-disabled, #3f4759);
+        color: var(--button-color-disabled, #3f4759);
+    }
+
+    /*noinspection CssUnresolvedCustomProperty*/
+    &:not(:disabled):hover {
+        outline-color: var(--button-border-hover, #004491);
+        color: var(--button-color-hover, #004491);
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.text {
+    color: var(--button-color, #0073ec);
+    background-color: transparent;
+
+    /*noinspection CssUnresolvedCustomProperty*/
+    &:disabled {
+        color: var(--button-color-disabled, #3f4759);
+    }
+
+    /*noinspection CssUnresolvedCustomProperty*/
+    &:not(:disabled):hover {
+        color: var(--button-color-hover, #004491);
+    }
+}

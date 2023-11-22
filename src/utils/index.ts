@@ -1,1 +1,1 @@
-export { transition, boxShadow } from './style';
+export { combineClass } from './string';

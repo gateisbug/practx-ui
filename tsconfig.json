@@ -32,10 +32,10 @@
 
     "paths": {
       "@src/*": ["src/*"],
-      "@view/*": ["src/view/*"],
-      "@view": ["src/view/index.ts"],
       "@ui/*": ["src/ui/*"],
-      "@ui": ["src/ui/index.ts"]
+      "@ui": ["src/ui/index.ts"],
+      "@util/*": ["src/utils/*"],
+      "@util": ["src/utils/index.ts"]
     }
   },
 
