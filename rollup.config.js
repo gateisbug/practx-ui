@@ -40,8 +40,8 @@ export default {
       ],
       modules: {
         generateScopedName: (name, _, css) => {
-          const hashcss = hashmaker(css, 4);
-          const hashname = hashmaker(name, 3);
+          const hashcss = hashmaker(css, 3);
+          const hashname = hashmaker(name, 2);
           return `css-${hashcss}${hashname}`;
         }
       },

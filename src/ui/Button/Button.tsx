@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './button.module.css';
 import { combineClass } from '@src/utils';
-import { ButtonProps } from './Button.types';
+import { ButtonProps } from '@src/ui';
 
 export default function Button({
   vx = 'fill',
