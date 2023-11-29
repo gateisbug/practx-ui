@@ -6,18 +6,16 @@ import { InputProps } from './Input.types';
 
 export default function Input({
   type = 'text',
+  full = false,
   className,
-  full,
   ...props
 }: InputProps) {
   return (
-    <div className={combineClass('prx-input-box', styles.box, className)}>
-      <input
-        className={combineClass('prx-input', styles.root)}
-        type={type as string}
-        data-full={full}
-        {...props}
-      />
-    </div>
+    <input
+      type={type as React.HTMLInputTypeAttribute}
+      className={combineClass('prx-input', styles.core, className)}
+      data-full={full}
+      {...props}
+    />
   );
 }

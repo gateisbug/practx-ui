@@ -1,20 +1,20 @@
-.box {}
+.core {
+    box-sizing: border-box;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1rem;
+    border: none;
+    padding: 0;
 
-.root {
-    &[type='number']::-webkit-inner-spin-button,
-    &[type='number']::-webkit-outer-spin-button {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button,
+    &::-webkit-clear-button,
+    &::-webkit-calendar-picker-indicator {
         -webkit-appearance: none;
         margin: 0;
     }
-    &[type='number'] {
+    &[type=number] {
         -moz-appearance: textfield;
     }
-
-    &[type="date"]::-webkit-calendar-picker-indicator {
-        display: none;
-    }
-}
-
-.root[data-full=true] {
-    width: 100%;
 }
