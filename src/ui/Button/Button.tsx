@@ -13,14 +13,9 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button
-      className={combineClass(
-        'prx-button',
-        styles.core,
-        styles.custom,
-        styles[vx],
-        full ? styles.fw : null,
-        className,
-      )}
+      className={combineClass('prx-button', styles.core, className)}
+      data-vx={vx}
+      data-full={full}
       {...props}
     >
       {children}

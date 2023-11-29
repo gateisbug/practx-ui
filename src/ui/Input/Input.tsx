@@ -11,16 +11,13 @@ export default function Input({
   ...props
 }: InputProps) {
   return (
-    <div
-      className={combineClass(
-        'prx-input-root',
-        styles.core,
-        styles.custom,
-        full ? styles.fw : null,
-        className,
-      )}
-    >
-      <input type={type as string} {...props} />
+    <div className={combineClass('prx-input-box', styles.box, className)}>
+      <input
+        className={combineClass('prx-input', styles.root)}
+        type={type as string}
+        data-full={full}
+        {...props}
+      />
     </div>
   );
 }

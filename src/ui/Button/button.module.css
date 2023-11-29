@@ -1,3 +1,4 @@
+/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
 .core {
     display: inline-flex;
     flex-flow: row nowrap;
@@ -11,23 +12,20 @@
                 background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
                 outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:disabled {
-        cursor: default;
-    }
-}
-
-/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
-.custom {
     padding: var(--button-padding, 0.5rem 1rem);
     border-radius: var(--button-radius, 0.25rem);
 }
 
-.fw {
+.core:disabled {
+    cursor: default;
+}
+
+.core[data-full=true] {
     width: 100%;
 }
 
 /*noinspection CssUnresolvedCustomProperty*/
-.fill {
+.core[data-vx=fill] {
     background-color: var(--button-surface, #0073ec);
     color: var(--button-color, #fff);
 
@@ -44,7 +42,7 @@
 }
 
 /*noinspection CssUnresolvedCustomProperty*/
-.line {
+.core[data-vx=line] {
     outline: 0.0625rem solid var(--button-border, #0073ec);
     background-color: var(--button-surface, transparent);
     color: var(--button-color, #0073ec);
@@ -63,7 +61,7 @@
 }
 
 /*noinspection CssUnresolvedCustomProperty*/
-.text {
+.core[data-vx=text] {
     color: var(--button-color, #0073ec);
     background-color: transparent;
 
