@@ -11,15 +11,18 @@
 
 /*noinspection CssUnresolvedCustomProperty*/
 .core:invalid, .core:required {
-    color: var(--input-color-alert, #ba1a1a);
+    color: var(--input-color-alert, #d32f2f);
 }
 
 /*noinspection CssUnresolvedCustomProperty*/
 .core:disabled {
-    color: var(--input-color-disabled, #6f778b);
+    color: var(--input-color-disabled, #8f8f8f);
 }
 
-.core:read-only {}
+/*noinspection CssUnresolvedCustomProperty*/
+.core:read-only {
+    color: var(--input-color-readonly, inherit);
+}
 
 .core:focus {
     outline: none;
@@ -33,4 +36,17 @@
 }
 .core[type=number] {
     -moz-appearance: textfield;
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.box {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.25rem;
+    outline: 0.0625rem solid var(--input-border, #e0e3e7);
+    background-color: var(--input-surface, transparent);
+    cursor: text;
+    box-sizing: border-box;
 }
