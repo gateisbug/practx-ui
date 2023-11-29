@@ -1,29 +1,26 @@
 import React from 'react';
-import styles from './button.module.css';
+import styles from './input.module.css';
 import { combineClass } from '@src/utils';
 // noinspection ES6PreferShortImport
-import { ButtonProps } from './Button.types';
+import { InputProps } from './Input.types';
 
-export default function Button({
-  vx = 'fill',
-  full = false,
+export default function Input({
+  type = 'text',
   className,
-  children,
+  full,
   ...props
-}: ButtonProps) {
+}: InputProps) {
   return (
-    <button
+    <div
       className={combineClass(
-        'prx-button',
+        'prx-input-root',
         styles.core,
         styles.custom,
-        styles[vx],
         full ? styles.fw : null,
         className,
       )}
-      {...props}
     >
-      {children}
-    </button>
+      <input type={type as string} {...props} />
+    </div>
   );
 }
