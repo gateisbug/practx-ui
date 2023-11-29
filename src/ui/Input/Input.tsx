@@ -6,7 +6,6 @@ import { InputProps } from './Input.types';
 
 export default function Input({
   type = 'text',
-  full = false,
   className,
   ...props
 }: InputProps) {
@@ -14,7 +13,6 @@ export default function Input({
     <input
       type={type as React.HTMLInputTypeAttribute}
       className={combineClass('prx-input', styles.core, className)}
-      data-full={full}
       {...props}
     />
   );

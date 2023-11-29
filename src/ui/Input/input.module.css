@@ -1,20 +1,33 @@
+/*noinspection CssUnresolvedCustomProperty*/
 .core {
     box-sizing: border-box;
     background-color: transparent;
     color: inherit;
     font-family: inherit;
     font-size: 1rem;
-    border: none;
-    padding: 0;
+    border: var(--input-border, none);
+    padding: var(--input-padding, 0);
+}
 
-    &::-webkit-inner-spin-button,
-    &::-webkit-outer-spin-button,
-    &::-webkit-clear-button,
-    &::-webkit-calendar-picker-indicator {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-    &[type=number] {
-        -moz-appearance: textfield;
-    }
+/*noinspection CssUnresolvedCustomProperty*/
+.core:invalid, .core:required {
+    color: var(--input-color-alert, #ba1a1a);
+}
+
+.core:disabled {}
+
+.core:read-only {}
+
+.core:focus {
+    outline: none;
+}
+.core::-webkit-inner-spin-button,
+.core::-webkit-outer-spin-button,
+.core::-webkit-clear-button,
+.core::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.core[type=number] {
+    -moz-appearance: textfield;
 }
