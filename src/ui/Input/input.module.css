@@ -14,7 +14,10 @@
     color: var(--input-color-alert, #ba1a1a);
 }
 
-.core:disabled {}
+/*noinspection CssUnresolvedCustomProperty*/
+.core:disabled {
+    color: var(--input-color-disabled, #6f778b);
+}
 
 .core:read-only {}
 
