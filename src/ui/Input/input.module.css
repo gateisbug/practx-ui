@@ -10,9 +10,13 @@
 }
 
 /*noinspection CssUnresolvedCustomProperty*/
-.core:invalid, .core:required {
-    color: var(--input-color-alert, #d32f2f);
+.core::placeholder {
+    color: var(--input-placholder-color, #666666);
 }
+
+/*.core:invalid, .core:required {*/
+/*    color: var(--input-color-alert, #d32f2f);*/
+/*}*/
 
 /*noinspection CssUnresolvedCustomProperty*/
 .core:disabled {
@@ -38,15 +42,27 @@
     -moz-appearance: textfield;
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
+/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
 .box {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     gap: 0.5rem;
     border-radius: 0.25rem;
-    outline: 0.0625rem solid var(--input-border, #e0e3e7);
+    outline: 0.0625rem solid var(--input-border, #666666);
     background-color: var(--input-surface, transparent);
     cursor: text;
     box-sizing: border-box;
+    padding: var(--input-padding, 0.75rem 1rem);
+    transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.box:has(.core:active), .box:has(.core:focus), .box:has(.core:hover) {
+    outline-color: var(--input-border-hover, currentColor);
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.box:has(.core:invalid) {
+    outline-color: var(--input-border-invalid, #d32f2f);
 }
