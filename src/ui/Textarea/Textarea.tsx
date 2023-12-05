@@ -1,5 +1,11 @@
+import React, {
+  ChangeEvent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import styles from './textarea.module.css';
-import { ChangeEvent, useEffect, useRef, useState } from 'react';
 import { combineClass } from '@util';
 // noinspection ES6PreferShortImport
 import { TextareaProps } from './Textarea.types';
@@ -16,27 +22,27 @@ export default function Textarea({
   const ref = useRef<HTMLTextAreaElement>(null);
   const [text, setText] = useState<string>(value ?? '');
 
-  const handleInput = (e: ChangeEvent<HTMLTextAreaElement>) => {
+  const _onChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setText(e.target.value);
     onChange && onChange(e);
   };
 
-  useEffect(() => {
+  const autoResizing = useCallback(() => {
     if (!autoResize) return;
 
     const textarea = ref.current;
     if (!textarea) return;
 
-    const adjustHeight = () => {
-      textarea.style.height = 'auto';
-      const newHeight = maxHeight
-        ? Math.min(textarea.scrollHeight, maxHeight)
-        : textarea.scrollHeight;
-      textarea.style.height = newHeight + 'px';
-    };
+    textarea.style.height = 'auto';
+    const newHeight = maxHeight
+      ? Math.min(textarea.scrollHeight, maxHeight)
+      : textarea.scrollHeight;
+    textarea.style.height = newHeight + 'px';
+  }, [autoResize, ref, maxHeight]);
 
-    adjustHeight();
-  }, [text, maxHeight]);
+  useEffect(() => {
+    autoResizing();
+  }, [autoResizing]);
 
   const overflowY = (() => {
     if (!ref.current || !maxHeight) return 'hidden';
@@ -50,7 +56,7 @@ export default function Textarea({
     <textarea
       ref={ref}
       className={combineClass('prx-textarea', styles.core, className)}
-      onChange={handleInput}
+      onChange={_onChange}
       style={{
         overflowY,
         ...style,
