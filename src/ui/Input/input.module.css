@@ -14,10 +14,6 @@
     color: var(--input-placholder-color, #666666);
 }
 
-/*.core:invalid, .core:required {*/
-/*    color: var(--input-color-alert, #d32f2f);*/
-/*}*/
-
 /*noinspection CssUnresolvedCustomProperty*/
 .core:disabled {
     color: var(--input-color-disabled, #8f8f8f);
@@ -28,7 +24,7 @@
     color: var(--input-color-readonly, inherit);
 }
 
-.core:focus {
+.core:active, .core:focus {
     outline: none;
 }
 .core::-webkit-inner-spin-button,

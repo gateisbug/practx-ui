@@ -1,7 +1,28 @@
+/*noinspection CssUnresolvedCustomProperty*/
 .core {
-    border: none;
-    padding: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1rem;
+    border: var(--input-border, none);
+    padding: var(--input-padding, 0);
     resize: none;
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.core::placeholder {
+    color: var(--input-placholder-color, #666666);
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.core:disabled {
+    color: var(--input-color-disabled, #8f8f8f);
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.core:read-only {
+    color: var(--input-color-readonly, inherit);
 }
 
 .core:active, .core:focus {
