@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './input.module.css';
 // noinspection ES6PreferShortImport
-import { InputBoxProps } from './Input.types';
+import { InputBoxProps } from './InputBox.types';
 import { combineClass } from '@util';
 
 export default function InputBox({

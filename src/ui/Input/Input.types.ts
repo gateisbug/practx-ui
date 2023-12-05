@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes, InputHTMLAttributes } from 'react';
+import type { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 
 type HTMLInputAttribute = DetailedHTMLProps<
   InputHTMLAttributes<HTMLInputElement>,
@@ -11,10 +11,3 @@ export interface InputProps
   extends Omit<HTMLInputAttribute, 'type' | 'children'> {
   type?: InputTypes;
 }
-
-type HTMLDivAttribute = DetailedHTMLProps<
-  HTMLAttributes<HTMLDivElement>,
-  HTMLDivElement
->;
-
-export interface InputBoxProps extends HTMLDivAttribute {}

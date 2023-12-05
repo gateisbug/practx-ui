@@ -1,0 +1,9 @@
+.core {
+    border: none;
+    padding: 0;
+    resize: none;
+}
+
+.core:active, .core:focus {
+    outline: none;
+}
