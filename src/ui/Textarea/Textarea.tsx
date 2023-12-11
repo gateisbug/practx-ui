@@ -19,12 +19,16 @@ export default function Textarea({
   style,
   ...props
 }: TextareaProps) {
+  // noinspection TypeScriptValidateTypes
   const ref = useRef<HTMLTextAreaElement>(null);
   const [text, setText] = useState<string>(value ?? '');
 
   const _onChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setText(e.target.value);
-    onChange && onChange(e);
+    if (onChange) {
+      // noinspection TypeScriptValidateTypes
+      onChange(e);
+    }
   };
 
   const autoResizing = useCallback(() => {
@@ -53,6 +57,7 @@ export default function Textarea({
       : 'hidden';
   })();
 
+  // noinspection JSAnnotator,TypeScriptValidateTypes
   return (
     <textarea
       ref={ref}

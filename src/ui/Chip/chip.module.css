@@ -1,0 +1,52 @@
+/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
+.core {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    box-sizing: border-box;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    width: fit-content;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    padding: var(--chip-padding, 0.5rem 0.75rem);
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.core[data-vx=fill] {
+    background-color: var(--chip-surface, #0062d0);
+    color: var(--chip-color, #fff);
+    border-radius: var(--chip-radius, 3rem);
+
+    /*noinspection CssUnresolvedCustomProperty*/
+    &:not(:disabled):hover {
+        background-color: var(--chip-surface-hover, #004491);
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.core[data-vx=line] {
+    outline: 0.0625rem solid var(--chip-border, #0062d0);
+    background-color: var(--chip-surface, transparent);
+    color: var(--chip-color, #0062d0);
+    border-radius: var(--chip-radius, 3rem);
+
+    /*noinspection CssUnresolvedCustomProperty*/
+    &:not(:disabled):hover {
+        outline-color: var(--chip-border-hover, #004491);
+        color: var(--chip-color-hover, #004491);
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.core[data-vx=text] {
+    color: var(--chip-color, #0062d0);
+    background-color: transparent;
+
+    /*noinspection CssUnresolvedCustomProperty*/
+    &:not(:disabled):hover {
+        color: var(--chip-color-hover, #004491);
+    }
+}
