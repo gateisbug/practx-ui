@@ -28,8 +28,6 @@ export default function Textarea({
   };
 
   const autoResizing = useCallback(() => {
-    if (!autoResize) return;
-
     const textarea = ref.current;
     if (!textarea) return;
 
@@ -37,12 +35,15 @@ export default function Textarea({
     const newHeight = maxHeight
       ? Math.min(textarea.scrollHeight, maxHeight)
       : textarea.scrollHeight;
+
     textarea.style.height = newHeight + 'px';
   }, [autoResize, ref, maxHeight]);
 
   useEffect(() => {
+    if (!autoResize) return;
+
     autoResizing();
-  }, [autoResizing]);
+  }, [text]);
 
   const overflowY = (() => {
     if (!ref.current || !maxHeight) return 'hidden';
