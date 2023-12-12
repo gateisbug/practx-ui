@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './inputbox.module.css';
+import './inputbox.module.css';
+import { combineClass } from '@src/utils';
 // noinspection ES6PreferShortImport
 import { InputBoxProps } from './InputBox.types';
-import { combineClass } from '@util';
 
 export default function InputBox({
   children,
@@ -10,11 +10,26 @@ export default function InputBox({
   ...props
 }: InputBoxProps) {
   return (
-    <div
-      className={combineClass('prx-inputbox', styles.box, className)}
-      {...props}
-    >
+    <prx-inputbox class={combineClass('prx-inputbox', className)} {...props}>
       {children}
-    </div>
+    </prx-inputbox>
   );
 }
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      ['prx-inputbox']: Omit<InputBoxProps, 'className'> & { class: string };
+    }
+  }
+}
+
+class PrxInputBox extends HTMLDivElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
+}
+
+customElements.define('prx-inputbox', PrxInputBox, { extends: 'div' });

@@ -1,5 +1,5 @@
-/*noinspection CssUnresolvedCustomProperty*/
-.core {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+prx-textarea {
     box-sizing: border-box;
     background-color: transparent;
     color: inherit;
@@ -10,21 +10,22 @@
     resize: none;
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
-.core::placeholder {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+prx-textarea::placeholder {
     color: var(--input-placholder-color, #666666);
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
-.core:disabled {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+prx-textarea:disabled {
     color: var(--input-color-disabled, #8f8f8f);
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
-.core:read-only {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+prx-textarea:read-only {
     color: var(--input-color-readonly, inherit);
 }
 
-.core:active, .core:focus {
+/*noinspection CssInvalidHtmlTagReference*/
+prx-textarea:active, prx-textarea:focus {
     outline: none;
 }

@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './input.module.css';
+import './input.module.css';
 import { combineClass } from '@src/utils';
 // noinspection ES6PreferShortImport
-import { InputProps } from './Input.types';
+import { InputProps, InputTypes } from './Input.types';
 
 export default function Input({
   type = 'text',
@@ -10,10 +10,28 @@ export default function Input({
   ...props
 }: InputProps) {
   return (
-    <input
-      type={type as React.HTMLInputTypeAttribute}
-      className={combineClass('prx-input', styles.core, className)}
+    <prx-input
+      type={type as InputTypes}
+      class={combineClass('prx-input', className)}
       {...props}
     />
   );
 }
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      ['prx-input']: Omit<InputProps, 'className'> & { class: string };
+    }
+  }
+}
+
+class PrxInput extends HTMLInputElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
+}
+
+customElements.define('prx-input', PrxInput, { extends: 'input' });

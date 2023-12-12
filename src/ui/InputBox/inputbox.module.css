@@ -1,5 +1,5 @@
-/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
-.box {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction,CssInvalidHtmlTagReference*/
+prx-inputbox {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -7,18 +7,17 @@
     border-radius: 0.25rem;
     outline: 0.0625rem solid var(--input-border, #666666);
     background-color: var(--input-surface, transparent);
-    cursor: text;
     box-sizing: border-box;
     padding: var(--input-padding, 0.75rem 1rem);
     transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
-.box:has(.core:active), .box:has(.core:focus), .box:has(.core:hover) {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+prx-inputbox:has(.core:active), prx-inputbox:has(.core:focus), prx-inputbox:has(.core:hover) {
     outline-color: var(--input-border-hover, currentColor);
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
-.box:has(.core:invalid) {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+prx-inputbox:has(.core:invalid) {
     outline-color: var(--input-border-invalid, #d32f2f);
 }

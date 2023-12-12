@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './scroll.module.css';
-import { combineClass } from '@util';
+import './scroll.module.css';
+import { combineClass } from '@src/utils';
 // noinspection ES6PreferShortImport
 import { ScrollViewProps } from './ScrollView.types';
 
@@ -10,11 +10,26 @@ export default function ScrollView({
   ...props
 }: ScrollViewProps) {
   return (
-    <div
-      className={combineClass('prx-scrollview', styles.core, className)}
-      {...props}
-    >
+    <prx-scroll class={combineClass('prx-scroll', className)} {...props}>
       {children}
-    </div>
+    </prx-scroll>
   );
 }
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      ['prx-scroll']: Omit<ScrollViewProps, 'className'> & { class: string };
+    }
+  }
+}
+
+class PrxScroll extends HTMLDivElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
+}
+
+customElements.define('prx-scroll', PrxScroll, { extends: 'div' });

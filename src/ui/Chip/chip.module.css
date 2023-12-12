@@ -1,5 +1,5 @@
-/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
-.core {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction,CssInvalidHtmlTagReference*/
+prx-chip {
     display: inline-flex;
     flex-flow: row nowrap;
     box-sizing: border-box;
@@ -14,8 +14,8 @@
     padding: var(--chip-padding, 0.5rem 0.75rem);
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
-.core[data-vx=fill] {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+prx-chip[data-vx=fill] {
     background-color: var(--chip-surface, #0062d0);
     color: var(--chip-color, #fff);
     border-radius: var(--chip-radius, 3rem);
@@ -26,8 +26,8 @@
     }
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
-.core[data-vx=line] {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+prx-chip[data-vx=line] {
     outline: 0.0625rem solid var(--chip-border, #0062d0);
     background-color: var(--chip-surface, transparent);
     color: var(--chip-color, #0062d0);
@@ -40,8 +40,8 @@
     }
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
-.core[data-vx=text] {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+prx-chip[data-vx=text] {
     color: var(--chip-color, #0062d0);
     background-color: transparent;
 

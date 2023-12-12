@@ -1,5 +1,5 @@
-/*noinspection CssUnresolvedCustomProperty*/
-.core {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+prx-input {
     box-sizing: border-box;
     background-color: transparent;
     color: inherit;
@@ -9,31 +9,34 @@
     padding: var(--input-padding, 0);
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
-.core::placeholder {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+prx-input::placeholder {
     color: var(--input-placholder-color, #666666);
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
-.core:disabled {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+prx-input:disabled {
     color: var(--input-color-disabled, #8f8f8f);
 }
 
-/*noinspection CssUnresolvedCustomProperty*/
-.core:read-only {
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+prx-input:read-only {
     color: var(--input-color-readonly, inherit);
 }
 
-.core:active, .core:focus {
+/*noinspection CssInvalidHtmlTagReference*/
+prx-input:active, prx-input:focus {
     outline: none;
 }
-.core::-webkit-inner-spin-button,
-.core::-webkit-outer-spin-button,
-.core::-webkit-clear-button,
-.core::-webkit-calendar-picker-indicator {
+/*noinspection CssInvalidHtmlTagReference*/
+prx-input::-webkit-inner-spin-button,
+prx-input::-webkit-outer-spin-button,
+prx-input::-webkit-clear-button,
+prx-input::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
     margin: 0;
 }
-.core[type=number] {
+/*noinspection CssInvalidHtmlTagReference*/
+prx-input[type=number] {
     -moz-appearance: textfield;
 }
