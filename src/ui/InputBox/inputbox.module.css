@@ -1,5 +1,5 @@
 /*noinspection CssUnresolvedCustomProperty,CssInvalidFunction,CssInvalidHtmlTagReference*/
-prx-inputbox {
+.core {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -13,11 +13,11 @@ prx-inputbox {
 }
 
 /*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
-prx-inputbox:has(.core:active), prx-inputbox:has(.core:focus), prx-inputbox:has(.core:hover) {
+.core:has(.core:active), .core:has(.core:focus), .core:has(.core:hover) {
     outline-color: var(--input-border-hover, currentColor);
 }
 
 /*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
-prx-inputbox:has(.core:invalid) {
+.core:has(.core:invalid) {
     outline-color: var(--input-border-invalid, #d32f2f);
 }

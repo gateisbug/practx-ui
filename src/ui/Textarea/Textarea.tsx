@@ -5,8 +5,8 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import './textarea.module.css';
-import { combineClass } from '@src/utils';
+import styles from './textarea.module.css';
+import { combineClass } from '@util';
 // noinspection ES6PreferShortImport
 import { TextareaProps } from './Textarea.types';
 
@@ -59,9 +59,9 @@ export default function Textarea({
 
   // noinspection JSAnnotator,TypeScriptValidateTypes
   return (
-    <prx-textarea
+    <textarea
       ref={ref}
-      class={combineClass('prx-textarea', className)}
+      className={combineClass('prx-textarea', styles.core, className)}
       onChange={_onChange}
       style={{
         overflowY,
@@ -69,24 +69,6 @@ export default function Textarea({
       }}
       value={value}
       {...props}
-    ></prx-textarea>
+    ></textarea>
   );
 }
-
-declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace JSX {
-    interface IntrinsicElements {
-      ['prx-textarea']: Omit<TextareaProps, 'className'> & { class: string };
-    }
-  }
-}
-
-class PrxTextarea extends HTMLTextAreaElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-  }
-}
-
-customElements.define('prx-textarea', PrxTextarea, { extends: 'textarea' });

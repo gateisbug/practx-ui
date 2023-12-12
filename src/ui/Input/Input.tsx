@@ -1,37 +1,21 @@
 import React from 'react';
-import './input.module.css';
-import { combineClass } from '@src/utils';
+import styles from './input.module.css';
+import { combineClass } from '@util';
 // noinspection ES6PreferShortImport
 import { InputProps, InputTypes } from './Input.types';
 
 export default function Input({
   type = 'text',
+  readOnly = false,
   className,
   ...props
 }: InputProps) {
   return (
-    <prx-input
+    <input
       type={type as InputTypes}
-      class={combineClass('prx-input', className)}
+      className={combineClass('prx-input', styles.core, className)}
+      readOnly={readOnly}
       {...props}
     />
   );
 }
-
-declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace JSX {
-    interface IntrinsicElements {
-      ['prx-input']: Omit<InputProps, 'className'> & { class: string };
-    }
-  }
-}
-
-class PrxInput extends HTMLInputElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-  }
-}
-
-customElements.define('prx-input', PrxInput, { extends: 'input' });

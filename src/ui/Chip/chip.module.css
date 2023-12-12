@@ -1,5 +1,5 @@
 /*noinspection CssUnresolvedCustomProperty,CssInvalidFunction,CssInvalidHtmlTagReference*/
-prx-chip {
+.core {
     display: inline-flex;
     flex-flow: row nowrap;
     box-sizing: border-box;
@@ -15,7 +15,7 @@ prx-chip {
 }
 
 /*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
-prx-chip[data-vx=fill] {
+.core[data-vx=fill] {
     background-color: var(--chip-surface, #0062d0);
     color: var(--chip-color, #fff);
     border-radius: var(--chip-radius, 3rem);
@@ -27,7 +27,7 @@ prx-chip[data-vx=fill] {
 }
 
 /*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
-prx-chip[data-vx=line] {
+.core[data-vx=line] {
     outline: 0.0625rem solid var(--chip-border, #0062d0);
     background-color: var(--chip-surface, transparent);
     color: var(--chip-color, #0062d0);
@@ -41,7 +41,7 @@ prx-chip[data-vx=line] {
 }
 
 /*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
-prx-chip[data-vx=text] {
+.core[data-vx=text] {
     color: var(--chip-color, #0062d0);
     background-color: transparent;
 

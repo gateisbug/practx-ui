@@ -1,5 +1,5 @@
 /*noinspection CssUnresolvedCustomProperty,CssInvalidFunction,CssInvalidHtmlTagReference*/
-prx-button {
+.core {
     display: inline-flex;
     flex-flow: row nowrap;
     box-sizing: border-box;
@@ -17,17 +17,17 @@ prx-button {
 }
 
 /*noinspection CssInvalidHtmlTagReference */
-prx-button:disabled {
+.core:disabled {
     cursor: default;
 }
 
 /*noinspection CssInvalidHtmlTagReference */
-prx-button[data-full=true] {
+.core[data-full=true] {
     width: 100%;
 }
 
 /*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
-prx-button[data-vx=fill] {
+.core[data-vx=fill] {
     background-color: var(--button-surface, #0062d0);
     color: var(--button-color, #fff);
 
@@ -44,7 +44,7 @@ prx-button[data-vx=fill] {
 }
 
 /*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
-prx-button[data-vx=line] {
+.core[data-vx=line] {
     outline: 0.0625rem solid var(--button-border, #0062d0);
     background-color: var(--button-surface, transparent);
     color: var(--button-color, #0062d0);
@@ -63,7 +63,7 @@ prx-button[data-vx=line] {
 }
 
 /*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
-prx-button[data-vx=text] {
+.core[data-vx=text] {
     color: var(--button-color, #0062d0);
     background-color: transparent;
 
