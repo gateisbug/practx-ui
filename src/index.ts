@@ -1,3 +1,5 @@
+export { Badge, type BadgeProps } from './package';
+export { Modal, type ModalProps } from './package';
 export {
   Select,
   type SelectFormProps,

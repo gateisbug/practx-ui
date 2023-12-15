@@ -1,4 +1,3 @@
-export { Badge, type BadgeProps } from './Badge';
 export { Button, type ButtonProps } from './Button';
 export { Chip, type ChipProps } from './Chip';
 export { Input, type InputProps } from './Input';
