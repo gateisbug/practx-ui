@@ -18,7 +18,8 @@ function hashmaker(string, length = 6) {
 export default {
   input: {
     '.': 'src/index.ts',
-    // 'button': 'src/components/Button/index.ts',
+    'ui': 'src/package/ui/index.ts',
+    'view': 'src/package/view/index.ts',
   },
   output: [
     {

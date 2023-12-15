@@ -1,6 +1,6 @@
 {
   "name": "@practx/ui",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "repository": "https://github.com/gateisbug/practx-ui.git",
   "author": "gateisbug <luftwaffe04@naver.com>",
   "license": "MIT",
@@ -18,9 +18,13 @@
       "import": "./dist/index.js",
       "types": "./dist/types/index.d.ts"
     },
-    "./button": {
-      "import": "./dist/components/button/index.js",
-      "types": "./dist/types/Button/index.d.ts"
+    "./ui": {
+      "import": "./dist/ui/index.js",
+      "types": "./dist/types/package/ui/index.d.ts"
+    },
+    "./view": {
+      "import": "./dist/view/index.js",
+      "types": "./dist/types/package/view/index.d.ts"
     }
   },
   "browserslist": [
