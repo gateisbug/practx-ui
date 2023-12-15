@@ -7,6 +7,7 @@ export {
   type SelectItemProps,
 } from './ui';
 
+export { Badge, type BadgeProps } from './view';
 export { Button, type ButtonProps } from './view';
 export { Input, type InputProps } from './view';
 export { ScrollView, type ScrollViewProps } from './view';
