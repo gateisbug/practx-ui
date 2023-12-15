@@ -1,3 +1,4 @@
+export { Modal, type ModalProps } from './ui';
 export {
   Select,
   type SelectFormProps,

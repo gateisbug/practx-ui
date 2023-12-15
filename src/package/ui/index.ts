@@ -1,3 +1,5 @@
+export { Modal, type ModalProps } from './Modal';
+
 export {
   Select,
   type SelectFormProps,
