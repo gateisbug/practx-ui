@@ -1,7 +1,7 @@
 import React, { MouseEvent } from 'react';
-import styles from './style.module.css';
+import styles from '../style.module.css';
 import { combineClass } from '@util';
-import { FieldProps } from './types';
+import { FieldProps } from '../types';
 
 export default function Field({
   children,

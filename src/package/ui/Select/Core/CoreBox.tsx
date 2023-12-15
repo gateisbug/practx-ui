@@ -1,27 +1,24 @@
 import React, { MouseEvent } from 'react';
-import styles from './style.module.css';
+import styles from '../style.module.css';
 import { combineClass } from '@util';
-import { ItemProps } from './types';
+import { BoxProps } from '../types';
 
-export default function Item({
+export default function Box({
   children,
-  className,
-  value,
-  setValue,
+  setOpen,
   onClick,
+  className,
   ...props
-}: ItemProps) {
+}: BoxProps) {
   const _onClick = (e: MouseEvent<HTMLDivElement>) => {
-    if (value !== undefined && setValue !== undefined) {
-      setValue(value);
-    }
+    setOpen && setOpen(false);
     // noinspection TypeScriptValidateTypes
     onClick && onClick(e);
   };
 
   return (
     <div
-      className={combineClass('prx-select-item', styles.item, className)}
+      className={combineClass('prx-select-box', styles.box, className)}
       onClick={_onClick}
       {...props}
     >

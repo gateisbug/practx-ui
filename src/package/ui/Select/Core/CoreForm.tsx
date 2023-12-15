@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import styles from './style.module.css';
+import styles from '../style.module.css';
 import { combineClass } from '@util';
-import { FormProps, SelectValueType } from './types';
+import { FormProps, SelectValueType } from '../types';
 
 export default function Form({ children, className, ...props }: FormProps) {
   const openState = useState(false);
