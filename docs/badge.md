@@ -12,7 +12,7 @@ function App() {
       vertical='top'
       horizontal='right'
       className='my-badge'
-      style={...style}
+      style={{ ...style }}
     >
       Hello
     </Badge>

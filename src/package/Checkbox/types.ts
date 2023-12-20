@@ -6,9 +6,13 @@ type HTMLInputAttribute = DetailedHTMLProps<
 >;
 
 export interface CheckboxProps
-  extends Omit<HTMLInputAttribute, 'type' | 'name' | 'disabled' | 'checked'> {
+  extends Omit<
+    HTMLInputAttribute,
+    'type' | 'name' | 'disabled' | 'checked' | 'value'
+  > {
   name?: string;
   multiple?: boolean;
   disabled?: boolean;
   checked?: boolean;
+  value?: string;
 }

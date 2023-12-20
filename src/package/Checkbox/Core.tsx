@@ -5,10 +5,11 @@ import { CheckboxProps } from './types';
 
 export default function Checkbox({
   children,
+  value,
   name,
+  checked,
   multiple = false,
   disabled = false,
-  checked,
   className,
   style,
   ...props
@@ -25,6 +26,7 @@ export default function Checkbox({
         name={name}
         disabled={disabled}
         checked={checked}
+        value={value}
         {...props}
       />
       <Mark multiple={multiple} />

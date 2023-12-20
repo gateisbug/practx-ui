@@ -6,8 +6,12 @@ type HTMLInputAttribute = DetailedHTMLProps<
 >;
 
 export interface RadioProps
-  extends Omit<HTMLInputAttribute, 'type' | 'name' | 'disabled' | 'checked'> {
+  extends Omit<
+    HTMLInputAttribute,
+    'type' | 'name' | 'disabled' | 'checked' | 'value'
+  > {
   name?: string;
   disabled?: boolean;
   checked?: boolean;
+  value?: string;
 }

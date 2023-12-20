@@ -8,6 +8,7 @@ export default function Radio({
   name,
   disabled = false,
   checked,
+  value,
   className,
   style,
   ...props
@@ -24,6 +25,7 @@ export default function Radio({
         name={name}
         disabled={disabled}
         checked={checked}
+        value={value}
         {...props}
       />
       <Mark />
