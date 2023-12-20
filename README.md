@@ -12,9 +12,10 @@
 # yarn add practics-ui # use yarn
 ```
 
-## Usage
-
-## API Docs
+## Docs
+<header style='font-size: 24px; font-weight: 700;'>
+<a href='./docs/index.md'>Docs List</a>
+</header>
 
 ## Developer Guide
 ```shell
