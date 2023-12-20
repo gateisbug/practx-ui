@@ -1,14 +1,7 @@
-import {
-  ButtonHTMLAttributes,
-  DetailedHTMLProps,
-  HTMLAttributes,
-  InputHTMLAttributes,
-  ReactNode,
-  TextareaHTMLAttributes,
-} from 'react';
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 
 export type HTMLButtonAttrbute = DetailedHTMLProps<
-  ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 >;
 
@@ -28,14 +21,18 @@ export type HTMLLabelAttribute = DetailedHTMLProps<
 >;
 
 export type HTMLInputAttribute = DetailedHTMLProps<
-  InputHTMLAttributes<HTMLInputElement>,
+  HTMLAttributes<HTMLInputElement>,
   HTMLInputElement
->;
+> & {
+  readOnly?: boolean;
+};
 
 export type HTMLTextAreaAttibute = DetailedHTMLProps<
-  TextareaHTMLAttributes<HTMLTextAreaElement>,
+  HTMLAttributes<HTMLTextAreaElement>,
   HTMLTextAreaElement
->;
+> & {
+  readOnly?: boolean;
+};
 
 export type HTMLTableAttribute = DetailedHTMLProps<
   HTMLAttributes<HTMLTableElement>,
