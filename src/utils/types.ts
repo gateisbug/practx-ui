@@ -22,6 +22,11 @@ export type HTMLDivAttribute = DetailedHTMLProps<
   HTMLDivElement
 >;
 
+export type HTMLLabelAttribute = DetailedHTMLProps<
+  HTMLAttributes<HTMLLabelElement>,
+  HTMLLabelElement
+>;
+
 export type HTMLInputAttribute = DetailedHTMLProps<
   InputHTMLAttributes<HTMLInputElement>,
   HTMLInputElement
@@ -30,6 +35,26 @@ export type HTMLInputAttribute = DetailedHTMLProps<
 export type HTMLTextAreaAttibute = DetailedHTMLProps<
   TextareaHTMLAttributes<HTMLTextAreaElement>,
   HTMLTextAreaElement
+>;
+
+export type HTMLTableAttribute = DetailedHTMLProps<
+  HTMLAttributes<HTMLTableElement>,
+  HTMLTableElement
+>;
+
+export type HTMLTableSectionAttribute = DetailedHTMLProps<
+  HTMLAttributes<HTMLTableSectionElement>,
+  HTMLTableSectionElement
+>;
+
+export type HTMLTableRowAttribute = DetailedHTMLProps<
+  HTMLAttributes<HTMLTableRowElement>,
+  HTMLTableRowElement
+>;
+
+export type HTMLTableCellAttribute = DetailedHTMLProps<
+  HTMLAttributes<HTMLTableCellElement>,
+  HTMLTableCellElement
 >;
 
 export type SetStateType<T> = (value: T | ((prev: T) => T)) => void;

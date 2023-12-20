@@ -1,0 +1,47 @@
+.form {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+}
+
+.form[data-open=false] {
+    & > .box {
+        display: none;
+    }
+}
+
+.form[data-open=true] {
+    & > .box {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
+.box {
+    position: absolute;
+
+    top: var(--top, calc(100% + 0.125rem));
+    left: var(--left, 0);
+    right: var(--right, 0);
+
+    background-color: var(--surface, #f1f1f2);
+    border-radius: var(--radius, 0.25rem);
+    outline: 0.0625rem solid var(--border, #c4c4c4);
+    z-index: 1;
+}
+
+/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
+.field {
+    padding: var(--padding, 0.25rem 0.5rem);
+    background-color: var(--surface, #f1f1f2);
+    border-radius: var(--radius, 0.25rem);
+    outline: 0.0625rem solid var(--border, #c4c4c4);
+}
+
+/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
+.placeholder {
+    color: var(--placeholder, #666);
+}
+
+.item {}
