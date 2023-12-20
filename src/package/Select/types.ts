@@ -1,9 +1,12 @@
-import {
-  ChildrenType,
-  HTMLDivAttribute,
-  SetStateType,
-  StateType,
-} from '@util/types';
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+
+type HTMLDivAttribute = DetailedHTMLProps<
+  HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+>;
+
+export type SetStateType<T> = (value: T | ((prev: T) => T)) => void;
+export type StateType<T> = [T, SetStateType<T>];
 
 export type SelectValueType = string | number | string[] | number[] | null;
 
@@ -23,5 +26,5 @@ export interface FormProps extends Omit<HTMLDivAttribute, 'children'> {
   children?: (
     setOpen: SetStateType<boolean>,
     valueState: StateType<SelectValueType>,
-  ) => ChildrenType;
+  ) => ReactNode;
 }

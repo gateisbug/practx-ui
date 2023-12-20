@@ -1,4 +1,9 @@
-import { HTMLSpanAttribute } from '@util/types';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
+
+type HTMLSpanAttribute = DetailedHTMLProps<
+  HTMLAttributes<HTMLSpanElement>,
+  HTMLSpanElement
+>;
 
 type ChipVarientType = 'fill' | 'line' | 'text';
 

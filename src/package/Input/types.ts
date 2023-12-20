@@ -1,4 +1,9 @@
-import { HTMLInputAttribute } from '@util/types';
+import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
+
+type HTMLInputAttribute = DetailedHTMLProps<
+  InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+>;
 
 export type InputTypes =
   | 'text'

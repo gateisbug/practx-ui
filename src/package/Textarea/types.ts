@@ -1,4 +1,9 @@
-import { HTMLTextAreaAttibute } from '@util/types';
+import { DetailedHTMLProps, TextareaHTMLAttributes } from 'react';
+
+type HTMLTextAreaAttibute = DetailedHTMLProps<
+  TextareaHTMLAttributes<HTMLTextAreaElement>,
+  HTMLTextAreaElement
+>;
 
 export interface TextareaProps extends Omit<HTMLTextAreaAttibute, 'value'> {
   value?: string;
