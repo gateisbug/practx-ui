@@ -6,7 +6,7 @@ import { BadgeProps } from './types';
 export default function Badge({
   content,
   varient = 'standard',
-  show = false,
+  show = true,
   max = 99,
   vertical = 'top',
   horizontal = 'right',
