@@ -1,4 +1,7 @@
 # Practx-ui Docs
-- [`<Button>`](./button.md)
-- [`<Badge>`](./badge.md)
-- [`<Checkbox>`](./checkbox.md)
+- [Button](./button.md)
+- [Badge](./badge.md)
+- [Checkbox](./checkbox.md)
+- [Chip](./chip.md)
+- [Input](./input.md)
+- [InputBox](./inputbox.md)
