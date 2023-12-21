@@ -15,6 +15,7 @@ export default function Textarea({
   maxHeight,
   onChange,
   autoResize = true,
+  rows = 1,
   style,
   ...props
 }: TextareaProps) {
@@ -67,6 +68,7 @@ export default function Textarea({
         ...style,
       }}
       value={value}
+      rows={rows}
       {...props}
     ></textarea>
   );
