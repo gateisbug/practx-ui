@@ -5,3 +5,5 @@
 - [Chip](./chip.md)
 - [Input](./input.md)
 - [InputBox](./inputbox.md)
+- [Modal](./modal.md)
+- [Radio](./radio.md)

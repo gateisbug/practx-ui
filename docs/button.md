@@ -1,4 +1,6 @@
 # Button
+[back](./index.md)
+
 ## Usage
 ```tsx
 import { Button } from '@practx/ui';

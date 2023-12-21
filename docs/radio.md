@@ -1,15 +1,14 @@
-# Checkbox
+# Radio
 [back](./index.md)
 
 ## Usage
 ```tsx
-import { Checkbox } from '@practx/ui';
+import { Radio } from '@practx/ui';
 
 function App() {
   return (
-    <Checkbox
+    <Radio
       name='text'
-      multiple={false}
       disabled={false}
       checked={true}
       className='my-badge'
@@ -17,7 +16,7 @@ function App() {
       style={{ ...style }}
     >
       Hello
-    </Checkbox>
+    </Radio>
   )
 }
 ```
@@ -28,24 +27,21 @@ function App() {
 | `value`     | `string`        | `undefined` |
 | `name`      | `string`        | `undefined` |
 | `checked`   | `boolean`       | `undefined` |
-| `multiple`  | `boolean`       | `false`     |
 | `disabled`  | `boolean`       | `false`     |
 | `children`  | `ReactNode`     | `undefined` |
 | `className` | `string`        | `undefined` |
 | `style`     | `CSSProperties` | `undefined` |
 
 ## CSS Variable
-| Variable     | Property | Default    |
-|--------------|----------|------------|
-| `--width`    | `width`  | `1.5rem`   |
-| `--height`   | `height` | `1.5rem`   |
-| `--default`  | `color`  | `#666666`  |
-| `--disabled` | `color`  | `#bdbdbd`  |
-| `--primary`  | `color`  | `#ffb74d`  |
+| Variable     | Property | Default   |
+|--------------|----------|-----------|
+| `--default`  | `color`  | `#666666` |
+| `--disabled` | `color`  | `#bdbdbd` |
+| `--primary`  | `color`  | `#ffb74d` |
 
 ## Selector
 | Class Name        | HTML Tag |
 |-------------------|----------|
-| `prx-check-box`   | `label`  |
-| `prx-check-root`  | `input`  |
-| `prx-check-mark`  | `div`    |
+| `prx-radio-box`   | `label`  |
+| `prx-radio-root`  | `input`  |
+| `prx-radio-mark`  | `div`    |

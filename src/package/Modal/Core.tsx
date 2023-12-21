@@ -11,6 +11,7 @@ export default function Modal({
   className,
   ...props
 }: ModalProps) {
+  // noinspection TypeScriptValidateTypes
   const shadowRef = useRef<HTMLDivElement>(null);
 
   const onClickShadow = (e: MouseEvent<HTMLDivElement>) => {

@@ -1,4 +1,6 @@
 # Badge
+[back](./index.md)
+
 ## Usage
 ```tsx
 import { Badge } from '@practx/ui';

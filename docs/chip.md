@@ -1,4 +1,6 @@
 # Chip
+[back](./index.md)
+
 ## Usage
 ```tsx
 import { Chip } from '@practx/ui';

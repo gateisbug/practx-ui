@@ -1,4 +1,6 @@
 # Input
+[back](./index.md)
+
 ## Usage
 ```tsx
 import { Input, InputBox } from '@practx/ui';
