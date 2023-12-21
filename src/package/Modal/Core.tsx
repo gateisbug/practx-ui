@@ -1,8 +1,9 @@
 import React, { MouseEvent, useRef } from 'react';
-import styles from './style.module.css';
-import { combineClass, useScrollBlock } from '@util';
-import { ModalProps } from './types';
 import { createPortal } from 'react-dom';
+import styles from './style.module.css';
+import { combineClass } from '@util';
+import { ModalProps } from './types';
+import useScrollBlock from './useScrollBlock';
 
 export default function Modal({
   open,

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export function useScrollBlock(trigger: boolean, style?: string) {
+export default function useScrollBlock(trigger: boolean, style?: string) {
   useEffect(() => {
     const idx = document.body.getAttribute('data-index') ?? '0';
     const index = Number(idx);
