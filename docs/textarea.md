@@ -8,21 +8,19 @@ import { InputBox, Textarea } from '@practx/ui';
 function App() {
   return (
     <InputBox>
-      <InputBox>
-        <Textarea
-          value={value}
-          onChange={(e) => {
-            setValue(e.target.value);
-          }}
-          disabled={false}
-          readOnly={false}
-          required={false}
-          autoResize={true}
-          rows={1}
-          maxHeight={105}
-          placeholder='Please input here'
-        />
-      </InputBox>
+      <Textarea
+        value={value}
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
+        disabled={false}
+        readOnly={false}
+        required={false}
+        autoResize={true}
+        rows={1}
+        maxHeight={105}
+        placeholder='Please input here'
+      />
     </InputBox>
   )
 }
