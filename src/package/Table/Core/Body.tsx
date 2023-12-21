@@ -5,11 +5,11 @@ import { TBodyProps } from '../types';
 
 export default function Body({ children, className, ...props }: TBodyProps) {
   return (
-    <thead
+    <tbody
       className={combineClass('prx-table-body', styles.body, className)}
       {...props}
     >
       {children}
-    </thead>
+    </tbody>
   );
 }

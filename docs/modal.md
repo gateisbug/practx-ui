@@ -23,6 +23,8 @@ function App() {
         onClose={() => {
           setOpen(false);
         }}
+        className='my-scroll'
+        style={{ ...style }}
       >
         Hello
       </Modal>

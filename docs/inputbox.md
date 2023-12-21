@@ -7,7 +7,9 @@ import { Input, InputBox } from '@practx/ui';
 
 function App() {
   return (
-    <InputBox>
+    <InputBox
+      className='my-input-box'
+      style={{ ...style }}>
       <Input />
     </InputBox>
   )

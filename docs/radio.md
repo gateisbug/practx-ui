@@ -11,7 +11,7 @@ function App() {
       name='text'
       disabled={false}
       checked={true}
-      className='my-badge'
+      className='my-radio'
       value='hello'
       style={{ ...style }}
     >
