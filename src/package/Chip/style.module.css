@@ -19,11 +19,6 @@
 .core[data-vx=fill] {
     background-color: var(--primary, #ffb74d);
     color: var(--on-primary, #1c2025);
-
-    /*!*noinspection CssUnresolvedCustomProperty*!*/
-    /*&:not(:disabled):hover {*/
-    /*    background-color: var(--primary-hover, #b28035);*/
-    /*}*/
 }
 
 /*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
@@ -31,21 +26,10 @@
     outline: 0.0625rem solid var(--primary, #ffb74d);
     background-color: transparent;
     color: var(--primary, #ffb74d);
-
-    /*!*noinspection CssUnresolvedCustomProperty*!*/
-    /*&:not(:disabled):hover {*/
-    /*    outline-color: var(--primary-hover, #b28035);*/
-    /*    color: var(--primary-hover, #b28035);*/
-    /*}*/
 }
 
 /*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
 .core[data-vx=text] {
     color: var(--primary, #ffb74d);
     background-color: transparent;
-
-    /*!*noinspection CssUnresolvedCustomProperty*!*/
-    /*&:not(:disabled):hover {*/
-    /*    color: var(--primary-hover, #b28035);*/
-    /*}*/
 }

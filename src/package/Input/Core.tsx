@@ -14,7 +14,6 @@ export default function Input({
       type={type as InputTypes}
       className={combineClass('prx-input', styles.core, className)}
       readOnly={readOnly}
-      value={}
       {...props}
     />
   );
