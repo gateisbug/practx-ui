@@ -14,7 +14,7 @@
 
 ## Docs
 <header style='font-size: 24px; font-weight: 700;'>
-<a href='./docs/index.md'>Docs List</a>
+<a href='https://github.com/gateisbug/practx-ui/blob/main/docs/index.md'>Docs List</a>
 </header>
 
 ## Developer Guide
