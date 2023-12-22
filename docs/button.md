@@ -33,15 +33,15 @@ function App() {
 | `children`  | `ReactNode`                | `undefined` |
 
 ## CSS Variable
-| Variable          | Property                                   | Default       |
-|-------------------|--------------------------------------------|---------------|
-| `--padding`       | `padding`                                  | `0.5rem 1rem` |
-| `--radius`        | `border-radius`                            | `0.25rem`     |
-| `--primary`       | `color` `background-color` `outline-color` | `#ffb74d`     |
-| `--on-primary`    | `color`                                    | `#1c2025`     |
-| `--disabled`      | `background-color` `outline-color`         | `#e0e0e0`     |
-| `--on-disabled`   | `color`                                    | `#bdbdbd`     |
-| `--primary-hover` | `color` `background-color` `outline-color` | `#b28035`     |
+| Variable          | Property                                   | Default               |
+|-------------------|--------------------------------------------|-----------------------|
+| `--padding`       | `padding`                                  | `0.5rem 1rem`         |
+| `--radius`        | `border-radius`                            | `0.25rem`             |
+| `--primary`       | `color` `background-color` `outline-color` | `#ffb74d`             |
+| `--primary-hover` | `color` `background-color` `outline-color` | `#b28035`             |
+| `--on-primary`    | `color`                                    | `#1c2025`             |
+| `--disabled`      | `background-color` `outline-color`         | `rgba(0, 0, 0, 0.12)` |
+| `--on-disabled`   | `color`                                    | `rgba(0, 0, 0, 0.26)` |
 
 ## Selector
 | Class Name   | HTML Tag |

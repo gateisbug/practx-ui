@@ -39,10 +39,10 @@ function App() {
 | `style`       | `CSSProperties`                                             | `undefined`  |
 
 ## CSS Variable
-| Variable         | Property                             | Default    |
-|------------------|--------------------------------------|------------|
-| `--placeholder`  | `color`                              | `#6B7A90`  |
-| `--disabled`     | `color`                              | `#9e9e9e`  |
+| Variable         | Property | Default               |
+|------------------|----------|-----------------------|
+| `--placeholder`  | `color`  | `#6B7A90`             |
+| `--disabled`     | `color`  | `rgba(0, 0, 0, 0.26)` |
 
 ## Selector
 | Class Name     | HTML Tag |

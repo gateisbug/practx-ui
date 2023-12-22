@@ -36,7 +36,7 @@ function App() {
 ## CSS Variable
 | Variable      | Property           | Default             |
 |---------------|--------------------|---------------------|
-| `--alert`     | `background-color` | `#ed2e20`           |
+| `--primary`   | `background-color` | `#ffb74d`           |
 | `--font-size` | `font-size`        | `0.75rem`           |
 | `--padding`   | `padding`          | `0.25rem 0.5rem`    |
 | `--radius`    | `border-radius`    | `0.75rem` `0.25rem` |

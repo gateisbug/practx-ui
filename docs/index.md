@@ -9,5 +9,6 @@
 - [Radio](./radio.md)
 - [ScrollView](./scrollview.md)
 - [Select](./select.md)
+- [Skeleton](./skeleton.md)
 - [Table](./table.md)
 - [Textarea](./textarea.md)

@@ -33,13 +33,13 @@ function App() {
 | `style`     | `CSSProperties` | `undefined` |
 
 ## CSS Variable
-| Variable     | Property | Default    |
-|--------------|----------|------------|
-| `--width`    | `width`  | `1.5rem`   |
-| `--height`   | `height` | `1.5rem`   |
-| `--default`  | `color`  | `#666666`  |
-| `--disabled` | `color`  | `#bdbdbd`  |
-| `--primary`  | `color`  | `#ffb74d`  |
+| Variable     | Property | Default               |
+|--------------|----------|-----------------------|
+| `--width`    | `width`  | `1.5rem`              |
+| `--height`   | `height` | `1.5rem`              |
+| `--primary`  | `color`  | `#ffb74d`             |
+| `--default`  | `color`  | `rgba(0, 0, 0, 0.6)`  |
+| `--disabled` | `color`  | `rgba(0, 0, 0, 0.26)` |
 
 ## Selector
 | Class Name        | HTML Tag |

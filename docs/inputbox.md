@@ -22,13 +22,13 @@ function App() {
 | `style`     | `CSSProperties` | `undefined` |
 
 ## CSS Variable
-| Variable    | Property        | Default        |
-|-------------|-----------------|----------------|
-| `--radius`  | `border-radius` | `0.25rem`      |
-| `--border`  | `outline`       | `#c4c4c4`      |
-| `--padding` | `padding`       | `0.75rem 1rem` |
-| `--primary` | `outline-color` | `#ffb74d`      |
-| `--invalid` | `outline-color` | `#d32f2f`      |
+| Variable    | Property        | Default               |
+|-------------|-----------------|-----------------------|
+| `--radius`  | `border-radius` | `0.25rem`             |
+| `--padding` | `padding`       | `0.75rem 1rem`        |
+| `--primary` | `outline-color` | `#ffb74d`             |
+| `--border`  | `outline`       | `rgba(0, 0, 0, 0.23)` |
+| `--invalid` | `outline-color` | `#d32f2f`             |
 
 ## Selector
 | Class Name     | HTML Tag |

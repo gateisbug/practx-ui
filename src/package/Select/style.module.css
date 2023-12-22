@@ -25,21 +25,33 @@
     left: var(--left, 0);
     right: var(--right, 0);
 
-    background-color: var(--surface, #f1f1f2);
     border-radius: var(--radius, 0.25rem);
-    outline: 0.0625rem solid var(--border, #c4c4c4);
     z-index: 1;
 }
 
 /*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
 .field {
     padding: var(--padding, 0.25rem 0.5rem);
-    background-color: var(--surface, #f1f1f2);
     border-radius: var(--radius, 0.25rem);
-    outline: 0.0625rem solid var(--border, #c4c4c4);
 }
 
 /*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
 .placeholder {
     color: var(--placeholder, #666);
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: light) {
+    .box, .field {
+        background-color: var(--surface, #f1f1f2);
+        outline: 0.0625rem solid var(--border, rgba(0, 0, 0, 0.23));
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: dark) {
+    .box, .field {
+        background-color: var(--surface, #242424);
+        outline: 0.0625rem solid var(--border, rgba(255, 255, 255, 0.23));
+    }
 }

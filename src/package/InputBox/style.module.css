@@ -10,7 +10,6 @@
     cursor: text;
 
     border-radius: var(--radius, 0.25rem);
-    outline: 0.0625rem solid var(--border, #c4c4c4);
     padding: var(--padding, 0.75rem 1rem);
 }
 
@@ -31,5 +30,24 @@
 /*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
 .core:has(.core:invalid) {
     outline-width: 0.125rem;
-    outline-color: var(--invalid, #d32f2f);
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: light) {
+    .core {
+        outline: 0.0625rem solid var(--border, rgba(0, 0, 0, 0.23));
+    }
+    .core:has(.core:invalid) {
+        outline-color: var(--invalid, #d32f2f);
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: dark) {
+    .core {
+        outline: 0.0625rem solid var(--border, rgba(255, 255, 255, 0.23));
+    }
+    .core:has(.core:invalid) {
+        outline-color: var(--invalid, #f44336);
+    }
 }

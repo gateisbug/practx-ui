@@ -65,12 +65,12 @@ function App() {
 | `--top`         | `top`              | `calc(100% + 0.125rem)` |
 | `--left`        | `left`             | `0`                     |
 | `--right`       | `right`            | `0`                     |
-| `--surface`     | `background-color` | `#f1f1f2`               |
 | `--radius`      | `border-radius`    | `0.25rem`               |
 | `--border`      | `outline-color`    | `#c4c4c4`               |
 | `--padding`     | `padding`          | `0.25rem 0.5rem`        |
 | `--placeholder` | `color`            | `#666666`               |
-| `--border`      | `outline-color`    | `#c4c4c4`               |
+| `--surface`     | `background-color` | `#f1f1f2`               |
+| `--border`      | `outline-color`    | `rgba(0, 0, 0, 0.23)`   |
 
 ## Selector
 | Class Name       | HTML Tag |
