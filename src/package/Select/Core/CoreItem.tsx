@@ -1,5 +1,4 @@
 import React, { MouseEvent } from 'react';
-import styles from '../style.module.css';
 import { combineClass } from '@util';
 import { ItemProps } from '../types';
 
@@ -19,7 +18,7 @@ export default function Item({
 
   return (
     <div
-      className={combineClass('prx-select-item', styles.item, className)}
+      className={combineClass('prx-select-item', className)}
       onClick={_onClick}
       {...props}
     >

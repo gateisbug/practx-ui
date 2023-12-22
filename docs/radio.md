@@ -7,14 +7,7 @@ import { Radio } from '@practx/ui';
 
 function App() {
   return (
-    <Radio
-      name='text'
-      disabled={false}
-      checked={true}
-      className='my-radio'
-      value='hello'
-      style={{ ...style }}
-    >
+    <Radio name='text' disabled={false} checked={true} value='hello'>
       Hello
     </Radio>
   )

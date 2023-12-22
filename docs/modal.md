@@ -19,12 +19,10 @@ function App() {
         toggle
       </Button>
       <Modal
-        open={false}
+        open={open}
         onClose={() => {
           setOpen(false);
         }}
-        className='my-scroll'
-        style={{ ...style }}
       >
         Hello
       </Modal>

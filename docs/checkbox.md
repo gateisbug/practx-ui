@@ -12,9 +12,7 @@ function App() {
       multiple={false}
       disabled={false}
       checked={true}
-      className='my-checkbox'
       value='hello'
-      style={{ ...style }}
     >
       Hello
     </Checkbox>

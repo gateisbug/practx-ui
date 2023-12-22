@@ -13,8 +13,6 @@ function App() {
       max={99}
       vertical='top'
       horizontal='right'
-      className='my-badge'
-      style={{ ...style }}
     >
       Hello
     </Badge>

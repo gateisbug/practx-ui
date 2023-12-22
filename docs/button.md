@@ -9,10 +9,8 @@ function App() {
   return (
     <Button
       varient={'fill'}
-      disabled={true}
-      fullWidth={true}
-      className='my-button'
-      style={{ ...style }}
+      disabled={false}
+      fullWidth={false}
       onClick={() => {
         console.log('hello button');
       }}

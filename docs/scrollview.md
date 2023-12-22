@@ -3,20 +3,15 @@
 
 ## Usage
 ```tsx
-import { Input, InputBox } from '@practx/ui';
+import { ScrollView } from '@practx/ui';
 
 function App() {
   return (
     <div style={{ width: 400, height: 500 }}>
-      <ScrollView
-        className='my-scroll'
-        style={{ 
-          width: '100%', 
-          height: 2000, 
-          ...style, 
-        }}
-      >
-        Hello
+      <ScrollView>
+        <div style={{ width: '100%', height: 2000, backgroundColor: '#003' }}>
+          Hello
+        </div>
       </ScrollView>
     </div>
   )

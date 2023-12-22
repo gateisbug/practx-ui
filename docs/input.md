@@ -18,7 +18,6 @@ function App() {
         onChange={(e) => {
           setValue(e.target.value);
         }}
-        className='my-input'
       />
     </InputBox>
   )
