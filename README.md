@@ -8,8 +8,8 @@
 
 ## installation
 ```shell
-# npm install practics-ui # use npm
-# yarn add practics-ui # use yarn
+npm install @practx/ui # use npm
+yarn add @practx/ui # use yarn
 ```
 
 ## Docs
@@ -27,4 +27,4 @@ yarn
 MIT License
 
 ## Changelog
-이 패키지는 배포되지 않았습니다.
+- 1.0.0-alpha : 최초 배포
