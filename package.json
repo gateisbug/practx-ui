@@ -1,6 +1,6 @@
 {
   "name": "@practx/ui",
-  "private": false,
+  "version": "1.0.0-alpha",
   "description": "A simple, practical and general-purpose React component library.",
   "keywords": [
     "react",
@@ -14,7 +14,6 @@
   },
   "author": "gateisbug <luftwaffe04@naver.com> (https://github.com/gateisbug)",
   "license": "(MIT or Apache-2.0)",
-  "version": "1.0.0-alpha",
   "packageManager": "yarn@4.0.1",
   "scripts": {
     "build-tsc": "rm -rf ./dist && tsc",
