@@ -1,5 +1,6 @@
 {
   "name": "@practx/ui",
+  "private": false,
   "description": "A simple, practical and general-purpose React component library.",
   "keywords": [
     "react",
