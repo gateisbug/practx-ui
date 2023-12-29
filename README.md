@@ -26,7 +26,7 @@ yarn
 ## License
 MIT License
 
-## Changelog
+## Changelogw
 ### 1.0.1-alpha
 - SelectValueType의 type이 변경됨
 - Select.Item에 multiple이 추가됨

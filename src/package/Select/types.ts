@@ -23,7 +23,9 @@ export interface ItemProps extends HTMLDivAttribute {
   setValue?: SetStateType<SelectValueType>;
 }
 
-export interface FormProps extends Omit<HTMLDivAttribute, 'children'> {
+export interface FormProps
+  extends Omit<HTMLDivAttribute, 'children' | 'onChange'> {
+  onChange?: (values: Array<string | number>) => void;
   children?: (
     setOpen: SetStateType<boolean>,
     valueState: StateType<SelectValueType>,

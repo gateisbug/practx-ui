@@ -3,7 +3,12 @@ import styles from '../style.module.css';
 import { combineClass } from '@util';
 import { FormProps, SelectValueType } from '../types';
 
-export default function Form({ children, className, ...props }: FormProps) {
+export default function Form({
+  children,
+  className,
+  onChange,
+  ...props
+}: FormProps) {
   // noinspection TypeScriptValidateTypes
   const formRef = React.useRef<HTMLDivElement>(null);
   const openState = React.useState(false);
@@ -26,6 +31,10 @@ export default function Form({ children, className, ...props }: FormProps) {
       document.removeEventListener('click', clickAway);
     };
   }, []);
+
+  React.useEffect(() => {
+    onChange && onChange(valueState[0]);
+  }, [valueState[0]]);
 
   return (
     <div
