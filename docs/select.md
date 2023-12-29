@@ -2,6 +2,7 @@
 [back](./index.md)
 
 ## Usage
+### Single Selection
 ```tsx
 import { Select } from '@practx/ui';
 
@@ -18,6 +19,36 @@ function App() {
             {['hello1', 'hello2', 'hello3'].map((v, i) => (
               <Select.Item key={v} setValue={setValue} value={v}>
                 Hello-{i}
+              </Select.Item>
+            ))}
+          </Select.Box>
+        </>
+      )}
+    </Select.Form>
+  )
+}
+```
+### Multi Selection
+```tsx
+import { Select } from '@practx/ui';
+
+function App() {
+  return (
+    <Select.Form>
+      {(setOpen, [value, setValue]) => (
+        <>
+          <Select.Field setOpen={setOpen} placeholder='please select values'>
+            {value.length !== 0
+              ? Array.isArray(value)
+                ? value.join()
+                : value
+              : null}
+          </Select.Field>
+
+          <Select.Box>
+            {['hello1', 'hello2', 'hello3'].map((v, i) => (
+              <Select.Item key={v} setValue={setValue} value={v} multiple>
+                Hello-{i + 1}
               </Select.Item>
             ))}
           </Select.Box>

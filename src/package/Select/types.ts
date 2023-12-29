@@ -8,7 +8,7 @@ type HTMLDivAttribute = DetailedHTMLProps<
 export type SetStateType<T> = (value: T | ((prev: T) => T)) => void;
 export type StateType<T> = [T, SetStateType<T>];
 
-export type SelectValueType = string | number | string[] | number[] | null;
+export type SelectValueType = Array<string | number>;
 
 export interface FieldProps extends HTMLDivAttribute {
   setOpen?: SetStateType<boolean>;
@@ -18,7 +18,8 @@ export interface BoxProps extends HTMLDivAttribute {
   setOpen?: SetStateType<boolean>;
 }
 export interface ItemProps extends HTMLDivAttribute {
-  value?: SelectValueType;
+  multiple?: boolean;
+  value?: string | number | Array<string | number>;
   setValue?: SetStateType<SelectValueType>;
 }
 

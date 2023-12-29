@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React from 'react';
 import styles from '../style.module.css';
 import { combineClass } from '@util';
 import { FieldProps } from '../types';
@@ -11,7 +11,7 @@ export default function Field({
   placeholder,
   ...props
 }: FieldProps) {
-  const _onClick = (e: MouseEvent<HTMLDivElement>) => {
+  const _onClick = (e: React.MouseEvent<HTMLDivElement>) => {
     setOpen && setOpen((prev) => !prev);
     // noinspection TypeScriptValidateTypes
     onClick && onClick(e);

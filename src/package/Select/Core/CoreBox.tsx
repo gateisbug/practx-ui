@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React from 'react';
 import styles from '../style.module.css';
 import { combineClass } from '@util';
 import { BoxProps } from '../types';
@@ -10,7 +10,7 @@ export default function Box({
   className,
   ...props
 }: BoxProps) {
-  const _onClick = (e: MouseEvent<HTMLDivElement>) => {
+  const _onClick = (e: React.MouseEvent<HTMLDivElement>) => {
     setOpen && setOpen(false);
     // noinspection TypeScriptValidateTypes
     onClick && onClick(e);
