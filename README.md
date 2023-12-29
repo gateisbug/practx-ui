@@ -27,4 +27,10 @@ yarn
 MIT License
 
 ## Changelog
-- 1.0.0-alpha : 최초 배포
+### 1.0.1-alpha
+- SelectValueType의 type이 변경됨
+- Select.Item에 multiple이 추가됨
+- Select.Form에 ClickAway가 추가됨
+- Docs/Select에 Multiple case가 추가됨
+### 1.0.0-alpha
+- 최초 배포
