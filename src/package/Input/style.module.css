@@ -37,7 +37,7 @@
 
 /*noinspection CssInvalidHtmlTagReference*/
 .core:active, .core:focus {
-    outline: none;
+    border: none;
 }
 
 /*noinspection CssInvalidHtmlTagReference*/

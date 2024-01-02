@@ -1,5 +1,6 @@
 # Practics UI
-실용적이고 범용적인 간단한 React 컴포넌트 라이브러리.
+- 실용적이고 범용적인 간단한 React 컴포넌트 라이브러리.
+- 현재 변경이 잦기 때문에 1.0.0-alpha 버전을 사용하는 것을 권장.
 
 ## Features
 - fully support es6 Browser부터 지원
@@ -26,7 +27,10 @@ yarn
 ## License
 MIT License
 
-## Changelogw
+## Changelog
+### 1.0.2-alpha
+- Select.Form에 onChange가 추가됨
+
 ### 1.0.1-alpha
 - SelectValueType의 type이 변경됨
 - Select.Item에 multiple이 추가됨

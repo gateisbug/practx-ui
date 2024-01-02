@@ -44,7 +44,7 @@
 @media (prefers-color-scheme: light) {
     .box, .field {
         background-color: var(--surface, #f1f1f2);
-        outline: 0.0625rem solid var(--border, rgba(0, 0, 0, 0.23));
+        border: 0.0625rem solid var(--border, rgba(0, 0, 0, 0.23));
     }
 }
 
@@ -52,6 +52,6 @@
 @media (prefers-color-scheme: dark) {
     .box, .field {
         background-color: var(--surface, #242424);
-        outline: 0.0625rem solid var(--border, rgba(255, 255, 255, 0.23));
+        border: 0.0625rem solid var(--border, rgba(255, 255, 255, 0.23));
     }
 }
